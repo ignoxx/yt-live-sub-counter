@@ -3,7 +3,7 @@ var updateChartValue;
 var charts = {};
 
 var live_subcount = true;
-var live_subcount_update_speed = 3; //sec.
+var live_subcount_update_speed = 2.05; //sec.
 
 const API_KEY = "AIzaSyDMUVWhfuOeYGIQblbESVaK1FOcDiIc4XE" //"AIzaSyBKcTPclrtFQXyhPCvktDC1q4Mujohohok";
 const CHANNEL_ONE = "UCiye1pHfrRQjIM-93Oe9wNw"; //potato analytics
