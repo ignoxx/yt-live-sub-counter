@@ -21,6 +21,7 @@ class SubChart {
 
         this.chart = new Chart(ctx, this.templateData);
         this.chart.subHistory = [];
+        this.updateChartValue(0);
     }
 
     updateChartValue(newValue) {
