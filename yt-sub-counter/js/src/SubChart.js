@@ -1,39 +1,40 @@
 class SubChart {
-    historyLength = 6; // How much points can we look back? 
-
-    templateData = {
-        // The type of chart we want to create
-        type: 'line',
-
-        // The data for our dataset
-        data: {
-            labels: [],//[0, 0, 0, 0, 0, 0, 0],
-            datasets: [{
-                label: "Subscribers",
-                backgroundColor: 'rgba(255, 0, 0, 0.1)',
-                borderColor: 'rgb(255, 0, 0)',
-                data: [],
-            }]
-        },
-    }
 
     constructor(elementId) {
-        this.htmlElement = $(`#${elementId}`);
+        this.historyLength = 6; // How much points can we look back? 
+
+        this.templateData = {
+            type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels: [],
+                datasets: [{
+                    label: "Subscribers",
+                    backgroundColor: 'rgba(255, 0, 0, 0.1)',
+                    borderColor: 'rgb(255, 0, 0)',
+                    data: [],
+                }]
+            },
+        }
         let ctx = document.getElementById(elementId).getContext('2d');
 
-        this.chart = new Chart(ctx, templateData);
+        this.chart = new Chart(ctx, this.templateData);
         this.chart.subHistory = [];
     }
 
     updateChartValue(newValue) {
+
+        //Add new values to chart
         this.chart.subHistory.push(newValue);
         this.chart.data.labels.push(this.getCurrentTime());
 
-        if(this.chart.subHistory.length > historyLength) {
+        //Shift list if we reach our historyLength
+        if (this.chart.subHistory.length > this.historyLength) {
             this.chart.subHistory.shift();
             this.chart.data.labels.shift();
         }
-        
+
         this.chart.data.datasets[0].data = this.chart.subHistory;
 
         this.chart.update();

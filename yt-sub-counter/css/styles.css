@@ -16,7 +16,7 @@
 
 .demo-ribbon {
   width: 100%;
-  height: 40vh;
+  height: 37vh;
   background-color: rgb(255, 66, 66);
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
@@ -73,6 +73,12 @@
   text-align: center;
 }
 
+.mdl-card__supporting-text > p{
+  position: relative;
+  top: 25px;
+  font-size: 95px;
+}
+/*
 .mdl-card__supporting-text > p:first-child{
   padding-top: 15px;
   font-size: 65px !important;
@@ -82,6 +88,7 @@
   padding-top: 20px;
   font-size: 18px !important;
 }
+*/
 
 .page-title{
   font-size: 55px;
