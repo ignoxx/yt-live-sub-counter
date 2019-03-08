@@ -5,6 +5,8 @@ class YouTubeData {
         this.liveDataUpdateSpeed = 2.05; //seconds
 
         this.channels = [];
+
+        return this;
     }
 
     start() {
@@ -24,6 +26,8 @@ class YouTubeData {
                 this.channels.push(Channel);
             }
         }
+
+        return this;
     }
 
     removeChannel(Channel) {
