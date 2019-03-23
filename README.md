@@ -1,5 +1,5 @@
 # YouTube real-time subcounter
-Compare the subscriber number of two channels in real-time and see how many subscribers they are apart!
+Compare the subscriber count of two channels in real-time and see how many subscribers they are apart!
 
 # Requirments
 -  [Google API Key for YouTube Data v3](https://console.cloud.google.com/)
