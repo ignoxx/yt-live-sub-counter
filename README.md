@@ -24,4 +24,4 @@ $(() => {
 });
 ```
 # Screenshot(s)
-![Screenshot](screenshots\screenshot.jpg)
+![Screenshot](https://github.com/IgnasKavaliauskas/yt-live-sub-counter/blob/master/screenshots/screenshot.jpg)
