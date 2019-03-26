@@ -1,6 +1,6 @@
 class YouTubeData {
     constructor() {
-        this.API_KEY = "AIzaSyBKcTPclrtFQXyhPCvktDC1q4Mujohohok";
+        this.API_KEY = "YOUR_KEY_HERE";
         this.liveData = true;
         this.liveDataUpdateSpeed = 2.05; //seconds
 
