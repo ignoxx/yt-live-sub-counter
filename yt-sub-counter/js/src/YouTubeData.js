@@ -1,6 +1,6 @@
 class YouTubeData {
     constructor() {
-        this.API_KEY = "AIzaSyBKcTPclrtFQXyhPCvktDC1q4Mujohohok";//"AIzaSyDMUVWhfuOeYGIQblbESVaK1FOcDiIc4XE" //"AIzaSyBKcTPclrtFQXyhPCvktDC1q4Mujohohok";
+        this.API_KEY = "AIzaSyBKcTPclrtFQXyhPCvktDC1q4Mujohohok";
         this.liveData = true;
         this.liveDataUpdateSpeed = 2.05; //seconds
 
@@ -9,8 +9,12 @@ class YouTubeData {
         return this;
     }
 
-    start() {
+    start(updateSpeed = this.liveDataUpdateSpeed) {
         this.updateData();
+
+        if (updateSpeed != this.liveDataUpdateSpeed) {
+            this.liveDataUpdateSpeed = updateSpeed;
+        }
 
         if (this.liveData) {
             this.updateIntervall = setInterval(this.updateData.bind(this), this.liveDataUpdateSpeed * 1000);
@@ -39,9 +43,10 @@ class YouTubeData {
 
     updateData() {
         // #region Update data only if we have 2 provided channels
-        if (this.channels.length < 2) { return; }
-        if (this.channels[0] === undefined || this.channels[1] === undefined) {
-            return;
+        if (this.channels.length < 2) return;
+
+        for (let i in this.channels) {
+            if (this.channels[i] === undefined) return;
         }
         // #endregion
 

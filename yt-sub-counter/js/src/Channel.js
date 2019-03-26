@@ -13,7 +13,7 @@ class Channel {
             subCountId: `.odometer.channel-${htmlElementAppendix}`,
             subDiff: `#subdiff`
         };
-        
+
         this.chart = new SubChart(`chart-${htmlElementAppendix}`);
     }
 
@@ -31,7 +31,7 @@ class Channel {
         this.subCount = subCount;
         this.chart.updateChartValue(subCount);
         $(this.htmlElements.subCountId).html(subCount);
-        
+
     }
 
     setChannelName(channelName) {
