@@ -9,7 +9,7 @@ Compare the subscriber count of two channels in real-time and see how many subsc
 
 
 # Code example
-Initial code to get started
+Initial code to get started [(src/script.js)](https://github.com/IgnasKavaliauskas/yt-live-sub-counter/blob/master/yt-sub-counter/js/script.js)
 ```
 const CHANNEL_ONE = "UC-lHJZR3Gqxm24_Vd_AJ5Yw"; //pewdiepie
 const CHANNEL_TWO = "UCq-Fj5jknLsUf-MWSy4_brA"; //t-series
